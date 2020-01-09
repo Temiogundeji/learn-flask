@@ -4,13 +4,9 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello World"
+@app.route("/about")
+def about():
+    return "<h2>About Page</h2><p>We are a non-profit organization working as an animal rescue. We aim to help you connect with the purrfect furbaby for you! The animals you find on our website are rescued and rehabilitated animals. Our mission is to promote the ideology hop!</p>"
 
-@app.route("/<my_name>")
-def greetings(my_name):
-    return "Welcome" + my_name + "!"
-
-@app.route('/square/<int:number>')
-def show_square(number):
-    return "Square of" + str(number * number) + " is:"
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port =3000)
