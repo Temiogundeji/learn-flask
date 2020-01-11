@@ -13,7 +13,8 @@ pets = [
 @app.route("/")
 def homepage():
     """View function for Home Page."""
-    return render_template("home.html")
+    # return render_template("home.html", pets=pets)
+    return render_template("home.html", pets = pets)
 
 
 @app.route("/about")
