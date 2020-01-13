@@ -1,7 +1,8 @@
 """Flask Application for Paws Rescue Center."""
 from flask import Flask, render_template
+from forms import LoginFom
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'dfewfew123213rwdsgert34tgfd1234trgf'
 """Information regarding the Pets in the System."""
 pets = [
             {"id": 1, "name": "Nelly", "age": "5 weeks", "bio": "I am a tiny kitten rescued by the good people at Paws Rescue Center. I love squeaky toys and cuddles."},
