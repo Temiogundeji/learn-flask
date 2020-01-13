@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    </div>
+        <h1>{{ pet.name | capitalize() }} details</h1>
+        <ul><img src= "{{url_for('static', filename = pet["id"]|string+".png")}}" height="100" ></ul>
+        <ul>{{ pet.name }}</ul>
+        <ul>{{ pet.age }}</ul>
+        <ul>{{ pet.bio }}</ul>
+    </div>
+{% endblock %}
